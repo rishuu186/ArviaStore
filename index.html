@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Arvia Store </title>
+  <meta name="description" content="E‑commerce template (HTML/CSS/JS) jewellery — single file. Replace images & product data to customize." />
+ 
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="logo">𝔸𝕤</div>
+      <div>
+        <div style="font-weight:800"> Arvia Store </div>
+        <div class="small muted">Fine jewellery & accessories</div>
+      </div>
+    </div>
+
+    <nav>
+    <ul class="nav-links">
+     <li><a href="#products">Shop</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#contact">Contact</a></li>
+     </ul>
+      
+      <button class="icon-btn" id="openCart" title="Open cart">🛒 <span id="cartCount" style="margin-left:6px;font-weight:800">0</span></button>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <span class="eyebrow">New Collection</span>
+        <h1>Bringing elegance, artistry, and a touch of sparkle to your everyday life</h1>
+        <p class="lead">Premium finishing. Made for everyday elegance. Discover our bestsellers and limited drops.</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="shopNow">Shop now</button>
+          <a class="btn btn-ghost" href="#products">Explore</a>
+        </div>
+        <div style="margin-top:18px;color:#6b4b51;font-size:14px">Free shipping over ₹999 · 14‑day returns · Secure payments</div>
+      </div>
+
+      <div class="hero-card pulse">
+        <img src="https://i.pinimg.com/1200x/98/f5/94/98f59453c0e785fcc41cd1fbd3e177c0.jpg" alt="hero">
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Popular products</h2>
+          <div class="small muted">Showing curated pieces</div>
+        </div>
+
+        <div class="grid" id="productGrid">
+          <!-- Products injected here -->
+        </div>
+      </div>
+    </section>
+</main>
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Hot Categories</h2>
+      <div class="small muted">Shop by style</div>
+    </div>
+
+    <div class="cat-grid">
+      <div class="cat-box" data-cat="earrings">
+        <img src="https://i.pinimg.com/1200x/43/2c/33/432c334ee0559e3c90a570d64833c6bd.jpg" alt="">
+        <p>Earrings</p>
+      </div>
+      
+      <div class="cat-box" data-cat="bracelets">
+        <img src="https://i.pinimg.com/736x/32/0f/73/320f735530bb0e8717f57cea7ea89605.jpg" alt="">
+        <p>Bracelets</p>
+      </div>
+      
+      <div class="cat-box" data-cat="necklaces">
+        <img src="https://i.pinimg.com/1200x/c1/fa/6e/c1fa6e68b0819227b8c5c0947731985c.jpg" alt="">
+        <p>Necklaces</p>
+      </div>
+
+      <div class="cat-box" data-cat="rings">
+        <img src="https://i.pinimg.com/736x/80/18/e5/8018e5e5ee7989d7d10497361483fd14.jpg" alt="">
+        <p>Rings</p>
+      </div>
+
+      <div class="cat-box" data-cat="anklets">
+        <img src="https://i.pinimg.com/736x/4a/d9/08/4ad908c83401583f6e209270c79992a9.jpg" alt="">
+        <p>Anklets</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- menu bar -->
+ <section class="section" id="about">
+<div id="mobileMenu" class="mobile-menu">
+    <div class="menu-header">
+        <h2>Arvia Jewellery</h2>
+        <span class="close-btn" onclick="closeMenu()"></span>
+    </div>
+
+    <div class="menu-section">
+        <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Bracelets</a></li>
+            <li><a href="#">Necklaces</a></li>
+            <li><a href="#">Earrings</a></li>
+            <li><a href="#">Rings</a></li>
+            <li><a href="#">Anklet</a></li>
+        </ul>
+    </div>
+
+    <div class="menu-section">
+        <h3>Customer Service</h3>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<!-- FOLLOW US + CURRENCY SWITCHER -->
+  <section id="follow-us" class="follow-section">
+  <h2>Follow Us</h2>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank">
+      <span>ArviaStore</span>
+    </a>
+  </div>
+</section>
+
+  <div class="currency-box">
+  <select id="currencySelect">
+    <option value="INR">₹ INR</option>
+    <option value="AED">AED</option>
+    <option value="USD">$ USD</option>
+    <option value="EUR">€ EUR</option>
+  </select>
+</div>
+
+<p id="price"></p>
+
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+<!-- End menu -->
+
+    <section class="section" id="about">
+      <div class="container">
+        <h3>About</h3>
+        <p class="small muted" style="max-width:820px"><b>Designed for Your Everyday Sparkle</b>
+We create fine, lightweight, skin-friendly jewellery that inspires beauty with simplicity.
+Crafted with attention to detail, our pieces are perfect for daily wear, gifting, and special occasions.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Arvia Store · Crafted with care
+  </footer>
+
+  <!-- cart floating button & panel -->
+  <button class="cart-drawer" id="openCartMobile">🛍 Cart</button>
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <h3>Your cart</h3>
+      <button id="closeCart">Close ✕</button>
+    </div>
+    <div id="cartItems" style="margin-top:12px;overflow:auto;max-height:60vh"></div>
+    <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <div class="muted">Subtotal</div>
+        <div id="cartSubtotal" style="font-weight:800;font-size:18px">₹0</div>
+      </div>
+      <div>
+        <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- product modal -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <img id="modalImg" src="" alt="product">
+      <div style="flex:1;display:flex;flex-direction:column">
+        <h3 id="modalTitle"></h3>
+        <div class="small muted" id="modalSku"></div>
+        <div style="margin-top:8px;font-weight:900;font-size:20px;color:#7f2a45" id="modalPrice"></div>
+        <p style="margin-top:10px" id="modalDesc"></p>
+        <div style="margin-top:auto;display:flex;gap:8px;align-items:center">
+          <div style="display:flex;gap:8px;align-items:center">
+            <button class="icon-btn" id="decreaseQty">−</button>
+            <div id="modalQty">1</div>
+            <button class="icon-btn" id="increaseQty">+</button>
+          </div>
+          <button class="btn btn-primary" id="addToCart">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  </body>
+</html>
